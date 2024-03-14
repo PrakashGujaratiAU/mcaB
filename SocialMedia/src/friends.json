@@ -1,0 +1,29 @@
+[
+    {
+        "Image":"assets/person.jpg",
+        "Name":"Sara Mendoza",
+        "Dot":"10min"
+
+    },
+    
+    {
+        "Image":"assets/person.jpg",
+        "Name":"Sara Mendoza",
+        "Dots":"assets/dot.png"
+
+    },
+    
+    {
+        "Image":"assets/person.jpg",
+        "Name":"Sara Mendoza",
+        "Dots":"assets/dot.png"
+
+    },
+    
+    {
+        "Image":"assets/person.jpg",
+        "Name":"Sara Mendoza",
+        "Dot":"10min"
+
+    }
+]
