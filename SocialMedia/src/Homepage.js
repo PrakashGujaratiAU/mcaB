@@ -1,7 +1,7 @@
 import './homepage.css';
 import Friends from './Friends';
 import Story from './Story.js';
-const mca = require('./mca.json')
+const stories = require('./stories.json')
 const friends = require('./friends.json');
 function Homepage(){
     return (
@@ -25,24 +25,22 @@ function Homepage(){
         
         <p>Main</p>
         {/* start story : `https://cms.atmiya.edu.in/images/Stud_Photo/${mca[0].AdmissionNo}.JPG` */}
-        <div className="flex-container">
-        {
-            mca.map(function(student){
-                return <Story image={`https://cms.atmiya.edu.in/images/Stud_Photo/${student.AdmissionNo}.JPG`} name={student.StudentName} />
-            })
-        }
-        </div>
+        
         
 
-        <div className="flex-container" style={{"float":"left","width":"72%"}}>
-            <div style={{"height":"300px","width":"285px","backgroundColor":"white","display":"flex"}}><p>Post</p></div>
-            <div style={{"height":"300px","width":"285px","backgroundColor":"white","display":"flex"}}><p>Post</p></div>
-            <div style={{"height":"300px","width":"285px","backgroundColor":"white","display":"flex"}}><p>Post</p></div>
-            <div style={{"height":"300px","width":"285px","backgroundColor":"white","display":"flex"}}><p>Post</p></div>
-            <div style={{"height":"300px","width":"285px","backgroundColor":"white","display":"flex"}}><p>Post</p></div>
-            <div style={{"height":"300px","width":"285px","backgroundColor":"white","display":"flex"}}><p>Post</p></div>
+        <div style={{"float":"left","width":"75%"}}>
+            <div className="flex-container">
+            {
+                stories.map(function(story){
+                    return <Story image={`https://cms.atmiya.edu.in/images/Stud_Photo/${story.AdmissionNo}.JPG`} name={(story.StudentName).split(' ')[0] + " " + (story.StudentName).split(' ')[1]} />
+                })
+            }
+            </div>
+            <div style={{"width":"100%"}}>
+                <p>Posts</p>
+            </div>          
         </div>
-        <div style={{"float":"right","width":"25%"}}>
+        <div style={{"float":"right","width":"22%"}}>
             {
             friends.map(function(faculty){
                 return <Friends image={faculty.Image} name={faculty.Name} dot={faculty.Dot} dots={faculty.Dots}/>

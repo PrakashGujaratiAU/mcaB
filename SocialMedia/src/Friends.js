@@ -2,7 +2,7 @@ function Friends(props) {
     return (
         <>
                 <div style={{ height: '30px', width: '400px',
-                    padding: '20px',marginTop:'20px'}} >
+                    padding: '10px',marginTop:'20px'}} >
 
                     <img src={props.image} alt="" 
                     height="40px" width="40px"  style={{marginTop:'-8px',float: 'left',borderRadius: '50%'}}>
@@ -14,13 +14,13 @@ function Friends(props) {
                             {props.name}
                         </p>
 
-                        <p style={{marginTop:'6px',float:"right",color:"#d9d9d9",fontSize:"9px",marginRight:"150px"}}>
+                        {/* <p style={{marginTop:'6px',float:"right",color:"#d9d9d9",fontSize:"9px",marginRight:"150px"}}>
                             {props.dot}
-                        </p>
+                        </p> */}
 
-                        <img src={props.dots} 
+                        {/* <img src={props.dots} 
                         height="12px" width="12px"  style={{float:"right",marginTop:'6px',borderRadius: '50%',marginRight:"11px",border:"0px"}}>
-                        </img>
+                        </img> */}
                     </div>
                 </div>
         </>
